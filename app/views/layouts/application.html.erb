@@ -12,10 +12,17 @@
   <div class="header">
   <a class="header__icon"><%= fa_icon 'twitter'%>Twitter</a>
   <div>
+  <% if user_signed_in? %>
     <ul class="menu">
-      <li>ログイン</li>
-      <li>新規登録</li>
+      <li><%= link_to "新規投稿", new_tweet_path, class:"menu__post"%></li>
+      <li><%= link_to "ログアウト", destroy_user_session_path,class:"menu__post",method: :delite %></li>
     </ul>
+    <% else %>
+    <ul class="menu">
+      <li><%= link_to "ログイン", new_user_session_path ,class:"menu__post"%></li>
+      <li><%= link_to "新規登録", new_user_registration_path,class:"menu__post" %></li>
+    </ul>
+    <% end %>
   </div>
   </div>
     <%= yield %>

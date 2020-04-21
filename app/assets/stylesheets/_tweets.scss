@@ -1,7 +1,86 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+.container{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  &__block{
+    width: 40%;
+    height:50%;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    &__icon{
+      text-align: center;
+      height: 15%;
+      i{
+      color: rgba(29,161,242,1.00);
+      font-size: 40px;
+      }
+    }
+    &__title{
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      h2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 23px;
+        font-weight: bold;
+      }
+    }
+    &__form{
+      &__field{
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 40px;
+        padding-right: 15px;   
+        .form1{
+          margin: 0 auto;
+          width: 500px;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+        }
+        .form1:focus{
+          outline: none;
+          border-color: rgba(29,161,242,1.00);
+        }
+        .title{
+          text-align: left;
+          display: inline-block;
+          text-align: left;
+          color: grey;
+          margin: 3px;
+        }
+      }
+      &__actions{
+        text-align: center;
+        .submit{
+          border-radius: 40px;
+          color: white;
+          background-color: rgba(29,161,242,1.00);
+          width: 95%;
+          height: 60px;
+        }
+      }
+      &__actions:hover{
+        opacity: 0.7;
+      }
+      &__account{
+        margin: 20px 0px 0px 230px;
+        color: rgba(29,161,242,1.00);
+        text-decoration: none;
+        display: inline-block;
+      }
+      &__account:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
 .header{
   height: 13vh;
   background-color:rgba(29,161,242,1.00);
@@ -23,10 +102,11 @@
     list-style: none;
     justify-content: flex-end;   
     align-items: center;
-    li{
+    &__post{
       color: white;
       font-weight: bold;
       padding-right:20px;
+      text-decoration: none;
     }
   }
 }
