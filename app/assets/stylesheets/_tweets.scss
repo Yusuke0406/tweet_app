@@ -4,15 +4,30 @@
 
 .header{
   height: 13vh;
-  background-color: blue;
+  background-color:rgba(29,161,242,1.00);
   margin: 0px;
   padding: 0px;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
   &__icon{
     color: white;
-    display: inline-block;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 700px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 20px;
+  }
+  .menu{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;   
+    align-items: center;
+    li{
+      color: white;
+      font-weight: bold;
+      padding-right:20px;
+    }
   }
 }
 .index{
