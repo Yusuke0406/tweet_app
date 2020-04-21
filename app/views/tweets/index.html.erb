@@ -1,0 +1,7 @@
+<div class="index">
+<% @tweets.each do|tweet|%>
+<p><%= tweet.text %></p>
+<img src="<%= tweet.image %>">
+<p><%=tweet.name%></p>
+<%end%>
+</div>
