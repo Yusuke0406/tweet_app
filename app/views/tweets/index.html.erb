@@ -1,7 +1,15 @@
-<div class="index">
-<% @tweets.each do|tweet|%>
-<p><%= tweet.text %></p>
-<img src="<%= tweet.image %>">
-<p><%=tweet.name%></p>
-<%end%>
+<div class="bgcolor"> 
+  <% @tweets.each do|tweet|%>
+    <div class="index">
+      <div class="index__items">
+        <div class="index__items__left">
+          <img src="/public/photo-tree.jpeg" class="image">
+        </div>
+        <div class="index__items__right">
+          <p class="name">Yusuke</p>
+          <p class="content"><%= tweet.text %></p>
+        </div>
+      </div>
+    </div>
+  <%end%>
 </div>
