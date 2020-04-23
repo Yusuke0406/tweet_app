@@ -6,10 +6,12 @@
       <h2>Twitterにログイン</h2>
     </div>
     <div class="container__block__form">
-    
-        <%= form_for @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+      <%= form_for @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+        <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+        <%- end -%>  
           <div class="container__block__form__field">
-            <%= f.label :電話、メールまたはユーザー名,{class:"title"} %><br />
+            <%= f.label :メールアドレス,{class:"title"} %><br />
             <%= f.email_field :email,class:"form1",autofocus: true%>
           </div>
         
