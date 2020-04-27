@@ -85,7 +85,7 @@
   }
 }
 .header{
-  height: 13vh;
+  height: 8vh;
   background-color:rgba(29,161,242,1.00);
   margin: 0px;
   padding: 0px;
@@ -118,44 +118,194 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  .index{
-    background-color: #fff;
-    width: 60vw;
-    margin: 0 auto;
-    margin-top: 40px;
-    box-shadow: 0 2px 6px #c1ced7;
-    &__items{
-      width: 100%;
+  h3{ 
+    font-weight: 300;
+    margin-left: 30%;
+    font-size: 48px;
+    display: inline-block;
+  }
+  .all{
+    max-width: 600vh;
+    margin: 60px auto;
+    overflow: scroll;
+    max-height: 80vh;
+    .index{
+      background-color: #fff;
+      width: 60vw;
       margin: 0 auto;
-      display: flex;
-      align-items: center;
-      &__left{
-        width: 10%;
-        height: 50px;
-        text-align: center;
+      box-shadow: 0 2px 6px #c1ced7;
+      &__items{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 3px 15px;
         
-        .image{
-          
-          width: 50px;
+        &__left{
+          width: 10%;
           height: 50px;
-          background-color: yellow;
-          border-radius: 40%;
-          box-shadow: 0 2px 6px #c1ced7;
-          object-fit: cover;
+          text-align: center;
+          .image{
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            border-radius: 40%;
+            box-shadow: 0 2px 6px #c1ced7;
+            object-fit: cover;
+            display: block;
+          }
+        }
+        &__right{
+          width: 90%;
+          padding-left: 20px;
+          .name{
+            font-size: 14px;
+            font-weight: 600;
+          }
+          .content{
+            color: #2d3133;
+            font-size: 14px;
+          }
         }
       }
-      &__right{
-        width: 90%;
-        padding-left: 20px;
-        .name{
-          font-size: 14px;
-          font-weight: 600;
+    }
+  }
+}
+.new_tweet{
+  max-width: 600px;
+  background-color: #fff;
+  margin: 0 auto;
+  // margin-top: 40px;
+  box-shadow: 0 2px 6px #c1ced7;
+  height: 40%;
+  &__body{
+    padding:30px;
+    max-width: 600px;
+    height: 80%;
+    &__tarea{
+      width: 99%;
+      height: 80%;
+      border: 1px solid #d8dadf;
+      resize: none;
+    }
+    .submit{
+      background-color: #3ecdc6;
+      color: white;
+      cursor: pointer;
+      font-weight: 300;
+      width: 120px;
+      border-radius: 2px;
+      margin-top: 8px;
+      margin-bottom: 0;
+      float: right;
+      height: 40px;
+    }
+  }
+}
+.show{
+  max-width: 600px;
+  margin: 40px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+  &__user{
+    text-align: center;
+    .icon_image{
+      width: 150px;
+      height: 150px;
+      border-radius: 150px;
+    }
+    .user_name{
+      font-size: 20px;
+      font-weight: 600;
+      margin:10px 0px;
+    }
+    .user_edit{
+      color: #8899a6;
+      text-decoration: underline;
+      font-weight: 200;
+    }
+    .user_email{
+      margin-top: 0px;
+    }
+  }
+  &__tabs{
+    display: flex;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+    margin-top: 20px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    li{
+      list-style-type: none;
+      padding: 16px 30px;
+      display: inline-block;
+      color: #afb6bf;
+    }
+    li.active{
+      border-bottom: 2px solid #3ecdc6;
+      color: #57575f;
+    }
+    li :not(.active):hover{
+      opacity: 0.5;
+      transition: .8s;
+    }
+  }
+  &__insides{
+    padding-left: 0px;
+    margin-top: 0px;
+    overflow: scroll;
+    max-height: 38vh;
+    .index{
+      &__items{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        &__left{
+          width: 10%;
+          text-align: center;
+          .image{
+            width: 50px;
+            height: 50px;
+            border-radius: 40%;
+            box-shadow: 0 2px 6px #c1ced7;
+            object-fit: cover;
+            display: block;
+          }
         }
-        .content{
-          color: #2d3133;
-          font-size: 14px;
+        &__right{
+          width: 90%;
+          padding-left: 20px;
+          .name{
+            font-size: 14px;
+            font-weight: 600;
+          }
+          .content{
+            color: #2d3133;
+            font-size: 14px;
+          }
         }
       }
+    }
+    li{
+      list-style: none;
+      font-size: 14px;
+      margin: 0px;
+      padding: 20px 30px;
+      background-color: white;
+      overflow: hidden;
+      box-shadow: 0 2px 6px #c1ced7;
+      display: none;
+    }
+    li.show{
+      display: block;
+      padding: 2px 15px;
     }
   }
 }

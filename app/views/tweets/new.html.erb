@@ -1,1 +1,9 @@
-aa
+<div class="bgcolor"> 
+  <h3>新規投稿</h3> 
+  <div class="new_tweet">
+    <%= form_for @tweet, url:tweets_path,method:"post",html: { class: "new_tweet__body" } do |f| %>
+      <%= f.text_area :text,class:"new_tweet__body__tarea" %><br>
+      <%= f.submit "投稿する",class:"submit"%>
+    <% end %>
+  </div>
+</div>
