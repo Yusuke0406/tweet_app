@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user
-    @user = User.find_by(id: @current_user.id)
+    @current_user = User.find_by(id: @current_user.id)
   end
 end

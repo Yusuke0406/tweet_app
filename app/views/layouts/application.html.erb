@@ -10,11 +10,13 @@
 
   <body>
   <div class="header">
-  <a class="header__icon"><%= fa_icon 'twitter'%>Twitter</a>
+  <%= link_to root_path,class:"header__icon" do%>
+  <i><%=fa_icon 'twitter'%>Twitter</i>
+  <% end %>
   <div>
   <% if user_signed_in? %>
     <ul class="menu">
-      <li><%= link_to "#{@user.name}様",user_path(@user.id),class:"menu__post" %></li>
+      <li><%= link_to "#{@current_user.name}様",user_path(@user.id),class:"menu__post" %></li>
       <li><%= link_to "投稿一覧", root_path,class:"menu__post"%></li>
       <li><%= link_to "新規投稿", new_tweet_path, class:"menu__post"%></li>
       <li><%= link_to "ログアウト", destroy_user_session_path,class:"menu__post",method: :delete %></li>
