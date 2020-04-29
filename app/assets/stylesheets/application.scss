@@ -16,3 +16,11 @@
  */
 @import "reset";
 @import "tweets";
+.flash_message{
+  background-color: lightBlue;
+  margin: 0px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+}

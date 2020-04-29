@@ -9,8 +9,13 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(tweets_params)
-    redirect_to(tweets_path)
+    @tweet = Tweet.create(tweets_params)
+    if @tweet.save
+      redirect_to(tweets_path)
+    else
+      flash.now[:notice] = "保存できませんでした"
+      render(new_tweet_path)
+    end
   end
 
   def show

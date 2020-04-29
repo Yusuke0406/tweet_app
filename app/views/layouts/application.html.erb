@@ -29,6 +29,9 @@
     <% end %>
   </div>
   </div>
+    <% if flash[:notice] %>
+      <p class="flash_message"><%= flash[:notice] %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
