@@ -326,8 +326,50 @@
     font-weight: 600;
 
   }
-  &__fomr{
+  &__form{
+    margin: 0 auto;
     width: 100%;
     background-color: #fff;
+    overflow: hidden;
+    &__block{
+      padding: 20px 40px;
+      &__title{
+        font-weight: 600;
+        display: inline-block;
+        padding-bottom: 10px;
+      }
+      &__name{
+        border-radius: 5px;
+        height: 40px;
+        width:  100%;
+        border: 1px solid #d8dadf;
+      }
+      &__submit{
+        .submit{
+          width: 20%;
+          height: 12%;
+          background-color: rgba(29,161,242,1.00);
+          color: #fff;
+          border-radius: 5px;
+          padding: 10px;
+          float: right;
+          margin-bottom: 20px;
+          margin-right: 35px;
+        }
+        .aaa{
+          float: left;
+          width: 17%;
+          height: 13%;
+          background-color: #3ecdc6;
+          color: #fff;
+          border-radius: 5px;
+          padding: 10px;
+          margin-bottom: 20px;
+          margin-left: 35px;
+          text-align: center;
+          text-decoration: none;
+        }
+      }
+    }
   }
 }

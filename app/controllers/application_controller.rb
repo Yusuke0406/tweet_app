@@ -5,9 +5,15 @@ class ApplicationController < ActionController::Base
 
   def config_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name,:image])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :image])
   end
+  
 
   def authenticate_user
     @current_user = User.find_by(id: @current_user.id)
+  end
+
+  def update_resource(resource, params)
+    resource.update_without_password(params)
   end
 end

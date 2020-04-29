@@ -10,10 +10,21 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(id:params[:id])
-    @user.update(user_params)
+    @user.name = params[:name]
+    @user.email = params[:email]
+    @user.image = params[:image]
+    # @user.password = params[:password]
+    if @user.save
+      flash[:notice] = "変更できました。"
+      redirect_to user_path(@user.id)
+    else
+      flash[:notice] = "変更できませんでした"
+      rendedr edit_user_path(@user.id)
+    end
   end
 
   private
+
   def user_params
     params.require(:user).permit(:name, :email, :image)
   end
