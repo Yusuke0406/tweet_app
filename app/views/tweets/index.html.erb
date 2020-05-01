@@ -10,7 +10,7 @@
           </div>
           <div class="index__items__right">
             <%= link_to tweet.user.name, user_path(tweet.user_id),class:"name" %>
-            <p class="content"><%= tweet.text %></p>
+            <%= link_to tweet.text, tweet_path(tweet.id),class:"content" %>
           </div>
         </div>
       </div>

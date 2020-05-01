@@ -1,0 +1,21 @@
+<div class=bgcolor>
+  <div class="showtweet">
+    <div class="showtweet__box">
+      <div class="showtweet__box__inside">
+        <img src="<%= @tweet.user.image%>",class="image">
+        <%= link_to @tweet.user.name, user_path(@tweet.user.id),class:"name" %>
+      </div>
+      <div class="showtweet__box__content">
+        <%= @tweet.text %>
+        <p><%= @tweet.created_at %></p>
+      </div>
+      <div class="showtweet__box__bottom">
+        <i><%= fa_icon "heart"%></i>
+        <div class=" showtweet__box__bottom__list">
+          <%= link_to "編集", edit_tweet_path,class:"edit"%>
+          <%= link_to "削除", tweet_path(@tweet.id), data: { confirm: "本当に削除しますか？" },class:"edit", method: :delete %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
