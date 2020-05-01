@@ -1,0 +1,11 @@
+<div class="bgcolor">
+  <div class="tweetedit">
+    <h4>編集する</h4>
+    <div class="tweetedit__box">
+      <%= form_for @tweet, url:tweet_path(@tweet.id) do |f| %>
+        <%= f.text_area :text,class:"tweetedit__box__space",placeholder:"#{@tweet.text}" %>
+        <%= f.submit "保存する", class:"submit"%>
+      <% end %>
+    </div>
+  </div>
+</div>

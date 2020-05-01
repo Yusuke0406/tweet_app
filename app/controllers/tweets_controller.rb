@@ -23,6 +23,19 @@ class TweetsController < ApplicationController
   end
 
   def edit
+    @tweet = Tweet.find_by(id: params[:id])
+  end
+
+  def update
+    @tweet = Tweet.find_by(id: params[:id])
+    @tweet.update(tweets_params)
+    if @tweet.save
+      flash[:notice] = "編集できました"
+      redirect_to root_path
+    else
+      flash[:notice] = "編集できませんでした"
+      render :edit
+    end
   end
 
   def destroy

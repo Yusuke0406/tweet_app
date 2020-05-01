@@ -425,3 +425,40 @@
     }
   }
 }
+.tweetedit{
+    max-width: 50vw;
+    margin: 60px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    clear: both;
+    h4{
+      font-size: 33.2px;
+    }
+    &__box{
+      background-color: #fff;
+      margin: 0 auto;
+      margin-top: 60px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px #c1ced7;
+      padding: 30px;
+      &__space{
+        font-size: 20px;
+        padding: 10px;
+        min-height: 140px;
+        border: 1px solid #d8dadf;
+        resize: none;
+        margin: 0 auto;
+        width: 96%;
+      }
+      .submit{
+        width: 20%;
+        height: 12%;
+        background-color: #1da1f2;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        float: right;
+        margin-top: 20px;
+      }
+    }
+}
