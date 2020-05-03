@@ -427,6 +427,9 @@
           padding: 0px 3px;
         }
       }
+      a{
+        text-decoration: none;
+      }
     }
   }
 }
@@ -548,4 +551,12 @@
       border-radius: 15px;
     }
   }
+}
+
+.like-btn {
+  color: #8899a6;
+}
+
+.like-btn-unlike {
+  color: #ff2581;
 }

@@ -20,6 +20,7 @@ class TweetsController < ApplicationController
 
   def show
     @tweet = Tweet.find_by(id: params[:id])
+    @likes_count = Like.where(tweet_id: @tweet.id).count
   end
 
   def edit
@@ -50,7 +51,4 @@ class TweetsController < ApplicationController
     params.require(:tweet).permit(:text).merge(user_id:current_user.id)
   end
 
-  def move_to_sign_in
-    redirect_to root_path unless :user_signed_in?
-  end
 end

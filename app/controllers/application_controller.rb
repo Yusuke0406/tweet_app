@@ -16,4 +16,9 @@ class ApplicationController < ActionController::Base
   def update_resource(resource, params)
     resource.update_without_password(params)
   end
+
+  def move_to_sign_in
+    redirect_to root_path unless :user_signed_in?
+  end
+
 end
