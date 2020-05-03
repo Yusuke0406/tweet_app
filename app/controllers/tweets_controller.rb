@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
   before_action :move_to_sign_in, except: [:show, :index]
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.all.order(updated_at:"desc").page(params[:page]).per(6)
   end
 
   def new

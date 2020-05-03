@@ -12,8 +12,10 @@
       <div class="showtweet__box__bottom">
         <i><%= fa_icon "heart"%></i>
         <div class=" showtweet__box__bottom__list">
+        <% if user_signed_in? && @current_user.id == @tweet.user.id %>
           <%= link_to "編集", edit_tweet_path,class:"edit"%>
           <%= link_to "削除", tweet_path(@tweet.id), data: { confirm: "本当に削除しますか？" },class:"edit", method: :delete %>
+          <% end %>
         </div>
       </div>
     </div>

@@ -269,14 +269,14 @@
     max-height: 38vh;
     .index{
       &__items{
-        width: 100%;
         margin: 0 auto;
         display: flex;
         align-items: center;
+        padding: 8px 10px;
         &__left{
           width: 10%;
           text-align: center;
-          .image{
+          img{
             width: 50px;
             height: 50px;
             border-radius: 40%;
@@ -291,10 +291,16 @@
           .name{
             font-size: 14px;
             font-weight: 600;
+            display: block;
+            text-decoration: none;
+            color: black;
           }
           .content{
+            padding-top: 10px;
             color: #2d3133;
             font-size: 14px;
+            display: block;
+            text-decoration: none;
           }
         }
       }
@@ -461,4 +467,48 @@
         margin-top: 20px;
       }
     }
+}
+.pagination{
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  .page{
+    a{
+      color: black;
+      text-decoration: none;
+      margin-right: 5px;
+    }
+    a:hover{
+      border-radius: 15px;
+    }
+  }
+  .page.current{
+    color: black;
+    padding: 10px;
+    background-color: rgba(29,161,242,1.00);;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+  .next{
+    a{
+      color: white;
+      padding: 10px;
+      background-color: rgba(29,161,242,1.00);;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-right: 5px;
+    }
+
+  }
+  .last{
+    a{
+      color: white;
+      padding: 10px;
+      background-color: rgba(29,161,242,1.00);;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-right: 5px;
+    }
+  }
 }
