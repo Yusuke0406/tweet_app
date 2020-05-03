@@ -128,7 +128,6 @@
   .all{
     max-width: 100vw;
     margin: 60px auto;
-    overflow: scroll;
     max-height: 80vh;
     .index{
       background-color: #fff;
@@ -474,7 +473,10 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   .page{
     a{
-      color: black;
+      color: white;
+      padding: 10px;
+      background-color: rgba(29,161,242,1.00);;
+      border-radius: 10px;
       text-decoration: none;
       margin-right: 5px;
     }
@@ -485,10 +487,13 @@
   .page.current{
     color: black;
     padding: 10px;
-    background-color: rgba(29,161,242,1.00);;
+    background-color: rgba(0,0,255,0.1);
     border-radius: 10px;
     text-decoration: none;
     margin-right: 5px;
+    a:hover{
+      border-radius: 15px;
+    }
   }
   .next{
     a{
@@ -498,6 +503,9 @@
       text-decoration: none;
       border-radius: 10px;
       margin-right: 5px;
+    }
+    a:hover{
+      border-radius: 15px;
     }
 
   }
@@ -509,6 +517,35 @@
       text-decoration: none;
       border-radius: 10px;
       margin-right: 5px;
+    }
+    a:hover{
+      border-radius: 15px;
+    }
+  }
+  .first{
+    a{
+      color: white;
+      padding: 10px;
+      background-color: rgba(29,161,242,1.00);;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-right: 5px;
+    }
+    a:hover{
+      border-radius: 15px;
+    }
+  }
+  .prev{
+    a{
+      color: white;
+      padding: 10px;
+      background-color: rgba(29,161,242,1.00);;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-right: 5px;
+    }
+    a:hover{
+      border-radius: 15px;
     }
   }
 }
