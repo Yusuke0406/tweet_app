@@ -1,17 +1,17 @@
-$(function() {
-  let tabs = $(".show__tab");
+// $(function() {
+//   let tabs = $(".show__tab");
 
-  function tabSwitch(){
+//   function tabSwitch(){
     
-    $(".active").removeClass("active");
+//     $(".active").removeClass("active");
 
-    $(this).addClass("active");
+//     $(this).addClass("active");
 
-    const index = tabs.index(this);
+//     const index = tabs.index(this);
 
-    $(".show__inside").removeClass("show").eq(index).addClass("show");
+//     $(".show__inside").removeClass("show").eq(index).addClass("show");
 
-    return false;
-  }
-  tabs.click(tabSwitch);
-});
+//     return false;
+//   }
+//   tabs.click(tabSwitch);
+// });

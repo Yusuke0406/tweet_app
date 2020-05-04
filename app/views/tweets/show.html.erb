@@ -10,6 +10,7 @@
         <p><%= @tweet.created_at %></p>
       </div>
       <div class="showtweet__box__bottom">
+      <%if @current_user %>
       <% if Like.find_by(user_id: @current_user.id, tweet_id: @tweet.id) %>
         <%= link_to("/likes/#{@tweet.id}/destroy", {method: "post"}) do %>
           <span class="fa fa-heart like-btn-unlike"></span>
@@ -20,6 +21,7 @@
         <% end %>
       <% end %>
       <%= @likes_count %>
+      <%end%>
         <div class=" showtweet__box__bottom__list">
         <% if user_signed_in? && @current_user.id == @tweet.user.id %>
           <%= link_to "編集", edit_tweet_path,class:"edit"%>

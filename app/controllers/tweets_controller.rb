@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :move_to_sign_in, except: [:show, :index]
+  before_action :when_no_current_user, except: [:index,:show]
   def index
     @tweets = Tweet.all.order(updated_at:"desc").page(params[:page]).per(6)
   end

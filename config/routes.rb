@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   post "likes/:tweet_id/create" => "likes#create"
   post "likes/:tweet_id/destroy" => "likes#destroy"
+  get "users/:id/likes" => "users#likes"
+
 end

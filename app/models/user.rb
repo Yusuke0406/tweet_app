@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   mount_uploader :image, ImageUploader
-  has_many :tweets
-  has_many :likes
+  has_many :tweets, dependent: :delete_all
+  has_many :likes, dependent: :delete_all
 end

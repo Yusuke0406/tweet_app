@@ -17,8 +17,11 @@ class ApplicationController < ActionController::Base
     resource.update_without_password(params)
   end
 
-  def move_to_sign_in
-    redirect_to root_path unless :user_signed_in?
+  def when_no_current_user
+    if @current_user == nil
+      flash[:notice] = "ログインが必要です"
+      redirect_to(new_user_session_path)
+    end
   end
 
 end
