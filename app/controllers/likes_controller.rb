@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-  before_action :move_to_sign_in
 
   def create
     @like = Like.create(user_id: @current_user.id, tweet_id: params[:tweet_id])
