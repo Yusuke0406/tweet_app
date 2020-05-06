@@ -437,6 +437,33 @@
     }
   }
 }
+.showcomment{
+    width: 50vw;
+    margin: 0 auto;
+    &__inside{
+      box-shadow: 0 2px 6px #c1ced7;
+      background-color: #fff;
+      margin-top: 30px;
+      padding: 40px 10px;
+      .new_tweet{
+        margin:0px;
+        width: 100%;
+        box-shadow: none;
+        max-width: 50vw;
+        text-align: center;
+        .comment_form{
+          width: 90%;
+          height: 100px;
+          margin: 0 auto;
+          border-radius: 10px;
+          border-color: #8899a6;
+        }
+        .btn{
+          color: red;
+        }
+      }
+    }
+}
 .tweetedit{
     max-width: 50vw;
     margin: 60px auto;
@@ -564,3 +591,5 @@
 .like-btn-unlike {
   color: #ff2581;
 }
+
+

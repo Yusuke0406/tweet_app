@@ -31,4 +31,16 @@
       </div>
     </div>
   </div>
+  <div class="showcomment">
+    <div class="showcomment__inside">
+      <% if @current_user %>
+        <%= form_for @comment, local: true do |form| %>
+          <%= form.text_area :text, placeholder: "コメントする", rows: "2",class:"comment_form"%><br/>
+          <%= form.submit "SEND", calss:"btn" %>
+        <% end %>
+      <% else %>
+        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+      <% end %>
+    </div>
+  </div>
 </div>
