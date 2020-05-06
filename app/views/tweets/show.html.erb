@@ -26,7 +26,7 @@
         <% if user_signed_in? && @current_user.id == @tweet.user.id %>
           <%= link_to "編集", edit_tweet_path,class:"edit"%>
           <%= link_to "削除", tweet_path(@tweet.id), data: { confirm: "本当に削除しますか？" },class:"edit", method: :delete %>
-          <% end %>
+        <% end %>
         </div>
       </div>
     </div>
@@ -34,13 +34,25 @@
   <div class="showcomment">
     <div class="showcomment__inside">
       <% if @current_user %>
-        <%= form_for @comment, local: true do |form| %>
-          <%= form.text_area :text, placeholder: "コメントする", rows: "2",class:"comment_form"%><br/>
-          <%= form.submit "SEND", calss:"btn" %>
+        <%= form_for @comment, url:tweet_comments_path(@tweet.id),html: { class: "showcomment__inside__form" } do |f| %>
+          <%= f.text_area :comment, placeholder: "コメントする", rows: "2",class:"showcomment__inside__form__area"%>
+          <%= f.submit "投稿する",class:"submit" %>
         <% end %>
       <% else %>
         <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
       <% end %>
+
+        <div class="showcomment__inside__comment">
+        <h4>＜コメント一覧＞</h4>
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <p>
+              <strong><%= link_to comment.user.name, user_path(comment.user.id) ,class:"name"%>：</strong>
+              <%= comment.comment %>
+            </p>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

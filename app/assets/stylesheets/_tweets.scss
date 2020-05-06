@@ -445,21 +445,34 @@
       background-color: #fff;
       margin-top: 30px;
       padding: 40px 10px;
-      .new_tweet{
+      overflow: hidden;
+      &__form{
         margin:0px;
         width: 100%;
         box-shadow: none;
         max-width: 50vw;
         text-align: center;
-        .comment_form{
-          width: 90%;
+        &__area{
+          width: 89%;
           height: 100px;
           margin: 0 auto;
           border-radius: 10px;
           border-color: #8899a6;
         }
-        .btn{
-          color: red;
+        .submit{
+          width: 90%;
+          background-color: #1da1f2;
+          color: #fff;
+          border-radius: 20px;
+          padding: 16px;
+          margin-top: 20px;
+        }
+      }
+      &__comment{
+        margin-left: 35px;
+        .name{
+          color: lightblue;
+          text-decoration: none;
         }
       }
     }
