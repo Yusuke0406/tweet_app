@@ -83,7 +83,7 @@ Rails.application.configure do
 
 
   Rails.application.configure do
-    config.action_mailer.default_url_options = { :host => 'EC2で発行してもらったIPアドレス' }
+    config.action_mailer.default_url_options = { :host => '54.150.205.107' }
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
       :address => "smtp.gmail.com",
