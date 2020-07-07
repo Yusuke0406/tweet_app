@@ -618,3 +618,26 @@
 }
 
 
+
+.search-form {
+  text-align: center;
+  color:rgb(142, 142, 142);
+  margin-bottom: 20px;
+  .search-input {
+    width: 18%;
+    margin-right: 10px;
+    height: 40px;
+    
+  }
+
+  .search-btn {
+    width: 5%;
+    background-color: white;
+    border-color: rgb(142, 142, 142);
+    height: 40px;
+    border-radius: 4px;
+  }
+  .search-btn:hover{
+    opacity: 0.8;
+  }
+}
