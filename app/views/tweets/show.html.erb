@@ -2,7 +2,11 @@
   <div class="showtweet">
     <div class="showtweet__box">
       <div class="showtweet__box__inside">
+      <% if @tweet.user.image? %>
         <img src="<%= @tweet.user.image%>",class="image">
+      <%else%>
+        <img src="/assets/default.png" class="image" alt="ユーザーアイコン" %>
+      <%end%>
         <%= link_to @tweet.user.name, user_path(@tweet.user.id),class:"name" %>
       </div>
       <div class="showtweet__box__content">

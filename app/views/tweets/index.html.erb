@@ -9,7 +9,11 @@
         <div class="index__items">
           <div class="index__items__left">
             <%= link_to user_path(tweet.user_id) do%>
+            <% if tweet.user.image? %>
               <img src="<%= tweet.user.image %>">
+              <% else %>
+              <img src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
+            <% end %>
             <%end%>
           </div>
           <div class="index__items__right">

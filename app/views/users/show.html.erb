@@ -1,7 +1,11 @@
 <div class="bgcolor">
   <div class="show">
     <div class="show__user">
+    <% if @user.image? %>
       <img src="<%= @user.image %>" class = "icon_image">
+    <% else %>
+      <img src="/assets/default.png" class = "icon_image" alt="ユーザーアイコン" %>
+    <% end %>
       <h4 class="user_name"><%=@user.name%></h4>
       <p class="user_email"><%= @user.email%></p>
       <% if @current_user.id == @user.id && user_signed_in? %>
@@ -19,7 +23,11 @@
           <div class="index__items">
             <div class="index__items__left">
               <%= link_to user_path(tweet.user_id) do%>
+            <% if tweet.user.image? %>
               <img src="<%= tweet.user.image %>">
+            <%else%>
+              <img src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
+            <%end%>
             <%end%>
             </div>
             <div class="index__items__right">
