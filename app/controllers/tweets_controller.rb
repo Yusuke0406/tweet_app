@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :when_no_current_user, except: [:index,:show]
+  before_action :when_no_current_user, except: [:index,:show,:search]
   def index
     @tweets = Tweet.all.order(updated_at:"desc").page(params[:page]).per(6)
   end
@@ -23,6 +23,10 @@ class TweetsController < ApplicationController
     @likes_count = Like.where(tweet_id: @tweet.id).count
     @comment = Comment.new
     @comments = @tweet.comments.includes(:user)
+  end
+
+  def search
+    @tweets = Tweet.search(params[:keyword])
   end
 
   def edit
