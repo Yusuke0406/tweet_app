@@ -7,7 +7,7 @@
       <%else%>
         <img src="/assets/default.png" class="image" alt="ユーザーアイコン" %>
       <%end%>
-        <img src="<%= @tweet.user.image%>",class="image", id="user_icon">
+        <%=link_to @tweet.user.name, user_path(@tweet.user_id),class:"name" %>
       </div>
       <div class="showtweet__box__content">
         <%= @tweet.text %>
