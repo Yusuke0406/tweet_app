@@ -641,3 +641,27 @@
     opacity: 0.8;
   }
 }
+
+.modal{
+  position: absolute;
+  top: 10%;
+  left: 33%;
+  border-radius: 10px;
+  height: auto;
+  text-align: center;  
+}
+.icon_image-modal{
+  width: 500px;
+  height: 500px;
+  border-radius: 250px;
+}
+.sign_modal_wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}

@@ -2,10 +2,23 @@
   <div class="show">
     <div class="show__user">
       <% if @user.image? %>
-        <img src="<%= @user.image %>" class = "icon_image">
+        <div id="user_icon"><img src="<%= @user.image %>" class = "icon_image" ,id="user_icon"></div>
       <% else %>
-        <img src="/assets/default.png" class = "icon_image" alt="ユーザーアイコン">
+        <div id="user_icon"><img src="/assets/default.png" class = "icon_image" alt="ユーザーアイコン" ,id="user_icon"></div>
       <% end %>
+      <%# モーダル %>
+      <div class="sign_modal_wrapper">
+        <div class="modal">
+          <% if @user.image? %>
+            <img src="<%= @user.image %>" class = "icon_image-modal">
+          <% else %>
+            <img src="/assets/default.png" class = "icon_image-modal" alt="ユーザーアイコン" %>
+          <% end %>
+          <div class="close-modal">
+            <i class="fa fa-2x fa-times"></i>
+          </div>
+        </div>
+      </div>
       <h4 class="user_name"><%=@user.name%></h4>
       <p class="user_email"><%= @user.email%></p>
       <%if @current_user.id == @user.id && user_signed_in? %>
