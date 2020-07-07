@@ -45,6 +45,7 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -73,4 +74,8 @@ gem 'kaminari'
 
 group :production do
   gem 'unicorn', '5.4.1'
+end
+
+group :test do
+  gem 'faker', "~> 2.8"
 end

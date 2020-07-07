@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :when_no_current_user, except: [:index,:show,:search]
+  # before_action :when_no_current_user, except: [:index,:show,:search]
   def index
     @tweets = Tweet.all.order(updated_at:"desc").page(params[:page]).per(5)
   end
