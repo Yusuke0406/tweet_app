@@ -8,7 +8,7 @@ describe User do
     end
 
     # 2
-    it " nicknameがない場合は登録できないこと" do
+    it " nameがない場合は登録できないこと" do
       user = build(:user, name: nil)
       user.valid?
       expect(user.errors[:name]).to include("can't be blank")
@@ -35,14 +35,14 @@ describe User do
       expect(user.errors[:password_confirmation]).to include("doesn't match Password")
     end
 
-    it " nicknameが8文字以上であれば登録できないこと" do
+    it " nameが8文字以上であれば登録できないこと" do
       user = build(:user, name: "aaaaaaaaa")
       user.valid?
       expect(user.errors[:name]).to include("is too long (maximum is 8 characters)")
     end
 
     # 7
-    it "nicknameが8文字以下では登録できること " do
+    it "nameが8文字以下では登録できること " do
       user = build(:user, name: "aaaaaaaa")
       expect(user).to be_valid
     end
